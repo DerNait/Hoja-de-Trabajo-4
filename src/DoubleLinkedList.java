@@ -4,7 +4,10 @@ public class DoubleLinkedList<T> implements IList<T> {
     private Node head;
     private Node tail;
     private int size;
-
+    
+    /**
+     * The class `Node` represents a node in a doubly linked list with data of type `T`.
+     */
     private class Node {
         T data;
         Node next;
@@ -23,6 +26,12 @@ public class DoubleLinkedList<T> implements IList<T> {
         size = 0;
     }
 
+    /**
+     * The `add` method adds a new node with the given value to the end of a doubly linked list.
+     * 
+     * @param value The `value` parameter represents the data that will be stored in the new node being
+     * added to the linked list.
+     */
     @Override
     public void add(T value) {
         Node newNode = new Node(value);
@@ -37,6 +46,15 @@ public class DoubleLinkedList<T> implements IList<T> {
         size++;
     }
 
+    /**
+     * This function retrieves the element at a specified index in a doubly linked list.
+     * 
+     * @param index The `index` parameter in the `get` method represents the position of the element
+     * that you want to retrieve from the data structure. It is an integer value that indicates the
+     * index of the element you are trying to access within the data structure.
+     * @return The `get` method is returning the data stored in the node at the specified index in a
+     * doubly linked list.
+     */
     @Override
     public T get(int index) {
         if (index < 0 || index >= size) {
@@ -57,6 +75,15 @@ public class DoubleLinkedList<T> implements IList<T> {
         return current.data;
     }
 
+    /**
+     * This function removes an element at a specified index from a doubly linked list.
+     * 
+     * @param index The `index` parameter in the `remove` method represents the position of the element
+     * that you want to remove from the list. It is an integer value that indicates the index of the
+     * element to be removed.
+     * @return The method is returning the data stored in the node that was removed from the linked
+     * list at the specified index.
+     */
     @Override
     public T remove(int index) {
         if (index < 0 || index >= size) {
@@ -94,11 +121,23 @@ public class DoubleLinkedList<T> implements IList<T> {
         return target.data;
     }
 
+    /**
+     * This function returns the size of a data structure.
+     * 
+     * @return The `size` variable is being returned.
+     */
     @Override
     public int size() {
         return size;
     }
 
+    /**
+     * The `isEmpty` function in Java checks if the size of a data structure is equal to zero.
+     * 
+     * @return The `isEmpty()` method is returning a boolean value that indicates whether the size of
+     * the data structure is equal to 0. If the size is 0, it will return `true`, indicating that the
+     * data structure is empty. Otherwise, it will return `false`.
+     */
     @Override
     public boolean isEmpty() {
         return size == 0;
