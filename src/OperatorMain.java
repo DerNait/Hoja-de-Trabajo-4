@@ -1,3 +1,7 @@
+/*Hoja de Trabajo #4
+Camila Richter - 23138
+Kevin Villagrán - 23584
+ */
 package src;
 
 import java.io.IOException;
@@ -33,6 +37,5 @@ public class OperatorMain {
         } catch (IOException e) {
             System.err.println("Error al leer el archivo: " + e.getMessage());
         }
-        scanner.close();
     }
 }
