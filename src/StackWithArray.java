@@ -4,11 +4,9 @@ import java.util.ArrayList;
 
 public class StackWithArray<T> implements IStack<T> {
 
-    private int index;
     ArrayList<T> internalArray;
 
     public StackWithArray(int qty){
-        index = 0;
         internalArray = new ArrayList<T>(qty);
     }
 
