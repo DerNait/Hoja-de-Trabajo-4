@@ -4,11 +4,9 @@ import java.util.Vector;
 
 public class StackWithVector<T> implements IStack<T> {
 
-    private int index;
     Vector<T> internalVector;
 
     public StackWithVector(int qty){
-        index = 0;
         internalVector = new Vector<T>(qty);
     }
 

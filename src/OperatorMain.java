@@ -37,6 +37,5 @@ public class OperatorMain {
         } catch (IOException e) {
             System.err.println("Error al leer el archivo: " + e.getMessage());
         }
-    scanner.close();
     }
 }
